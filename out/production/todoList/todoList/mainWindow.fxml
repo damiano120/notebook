@@ -1,0 +1,51 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="mainBorderPane" fx:controller="todoList.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="New" onAction="#showNewItemDialog"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <left>
+        <ListView fx:id="todoListView" >
+
+        </ListView>
+    </left>
+
+    <center>
+        <VBox>
+        <TextArea fx:id="itemDetailsTextArea" VBox.vgrow="ALWAYS"/>
+        <HBox style="-fx-background-color: lightgrey">
+            <Label text="Deadline: ">
+                <font>
+                    <Font name="Calibri bold" size="20"/>
+                </font>
+            </Label>
+            <Label fx:id="details">
+                <font>
+                    <Font name="Callibri" size="16"/>
+                </font>
+            </Label>
+        </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
