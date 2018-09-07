@@ -25,22 +25,22 @@ public class Main extends Application {
     }
 
     @Override
-    public void stop() throws Exception {   // save data to .txt
+    public void stop() throws Exception {             // save data to .txt
         try {
             TodoData.getInstance().saveTodoItems();     // pobierz obiekt klasy TodoData i zapisz metoda save...
 
         } catch (IOException e){
-            System.out.println(e.getMessage());     // wyswietl wyjatek
+            System.out.println(e.getMessage());        // wyswietl wyjatek
         }
     }
 
     @Override
-    public void init() throws Exception {       // load data from .txt
+    public void init() throws Exception {                 // load data from .txt
         try {
             TodoData.getInstance().loadTodoItems();     // pobierz obiekt klasy TodoData i zaladuj metoda load...
 
         } catch (IOException e){
-            System.out.println(e.getMessage());     //wyswietl wyjatek
+            System.out.println(e.getMessage());        //wyswietl wyjatek
         }
     }
 }

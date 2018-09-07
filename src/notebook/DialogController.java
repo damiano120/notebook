@@ -20,11 +20,11 @@ public class DialogController {
 
     public TodoItem processResults(){
         String shortDescription = shortDescriptionField.getText().trim();   // przypisz pobrany tekst
-        String details = detailsArea.getText().trim();      // przypisz pobrany tekst
-        LocalDate deadlineValue = deadlinePicker.getValue();    // przypisz pobrany tekst
+        String details = detailsArea.getText().trim();                       // przypisz pobrany tekst
+        LocalDate deadlineValue = deadlinePicker.getValue();                // przypisz pobrany tekst
 
         TodoItem newItem = new TodoItem(shortDescription, details, deadlineValue);  // nowy obiekt klasy TodoItem
-        TodoData.getInstance().addTodoItem(newItem);    //dodaj nowa pozycje do obiektu klasy TodoData
-        return newItem;     // zwroc nowa pozycje
+        TodoData.getInstance().addTodoItem(newItem);                  //dodaj nowa pozycje do obiektu klasy TodoData
+        return newItem;                                                      // zwroc nowa pozycje
     }
 }

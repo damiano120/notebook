@@ -1,6 +1,7 @@
 package notebook.dataModel;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,9 +17,9 @@ import java.util.List;
 public class TodoData {
 
     private static TodoData instance = new TodoData();
-    private static String filename = "TodoFileData.txt";
+    private static String filename = "Notes.txt";
 
-    private List<TodoItem> todoItems;
+    private ObservableList<TodoItem> todoItems;
     private DateTimeFormatter formatter;
 
     public static TodoData getInstance() {
@@ -26,10 +27,10 @@ public class TodoData {
     }
 
     private TodoData(){
-        formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");  // wzor formatu daty
+        formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");       // wzor formatu daty
     }
 
-    public List<TodoItem> getTodoItems() {
+    public ObservableList<TodoItem> getTodoItems() {
         return todoItems;
     }
 
@@ -82,5 +83,9 @@ public class TodoData {
                 bufferedWriter.close();     // zamknij bufor
             }
         }
+    }
+
+    public  void deleteTodoItem(TodoItem item){
+        todoItems.remove(item);
     }
 }

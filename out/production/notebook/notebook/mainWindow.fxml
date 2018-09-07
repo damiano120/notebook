@@ -52,9 +52,9 @@
                     </graphic>
                 </Button>
                     <Separator></Separator>
-                    <Button text="Delete" onAction="#showNewItemDialog">
+                    <Button text="New" onAction="#showNewItemDialog">
                         <tooltip>
-                            <Tooltip text="Delete selected note"/>
+                            <Tooltip text="Add a new note"/>
                         </tooltip>
                         <graphic>
                             <ImageView>
